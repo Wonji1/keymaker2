@@ -1,0 +1,145 @@
+.camera_label{
+    font-size: 2.5em; margin-left: 3em;
+}
+
+.camare_btn{
+    font-size: 2.0em; padding: 1px;margin-left: 3.7em; margin-right: 1em;display: inline-block;
+}
+
+.camera_span{
+    font-size: 1.2em; color: red;display: inline-block;
+}
+
+.qr_labal{
+    font-size: 2.5em; margin-left: 3em;
+}
+
+.qr_btn{
+    font-size:2em; padding: 1px; margin-left: 3.5em;
+}
+
+.upload_span{
+    font-size: 2em; padding: 1px;margin-left: 3.6em;
+}
+
+.img_label{
+    font-size: 2.5em; margin-left: 3em;
+}
+
+.qr_in1{
+    width: 15%; font-size: 2em;padding: 1px; margin-left: 3.7em;
+}
+
+.qr_in2, .qr_in3, .qr_in4{
+    width: 15%; font-size: 2em;padding: 1px; margin-left: 1em;
+}
+
+.span1{
+    font-size: 1.5em; padding: 1px;margin-left: 5em;
+}
+
+.span2{
+    color: red; font-size: 1.2em;
+}
+
+#boxbtn{
+    width: 2em; height: 2em;
+}
+
+.memo_label{
+    font-size: 2.5em; margin-left: 3em;
+}
+
+.memo_text{
+    width: 80%; font-size: 1.5em;padding: 1em; margin-left: 5em;
+}
+
+.key_p{
+    font-size: 6em;
+}
+
+#cancel_key{
+    margin-right: 15px;font-size: 1.5em; padding: 2px;
+}
+
+#issue_key{
+    font-size: 1.5em;padding: 2px;
+}
+
+#complete_key{
+    font-size: 1.5em;padding: 2px;display: none;
+}
+
+@media screen and (max-width: 767px){
+    .camera_label{
+        font-size: 4.5em; margin-left: 1.5em;
+    }
+
+    .camare_btn{
+        font-size: 3.5em; padding: 1px;margin-left: 2em; margin-right: 0.5em; display: inline-block;
+    }
+
+    .camera_span{
+        font-size: 2.5em; color: red; display: inline-block;
+    }
+
+    .qr_labal{
+        font-size: 4.5em; margin-left: 1.5em;
+    }
+
+    .qr_btn{
+        font-size:3.5em; padding: 1px; margin-left: 2em;
+    }
+
+    .upload_span{
+        font-size: 3em; padding: 1px;margin-left: 2em;
+    }
+
+    .img_label{
+        font-size: 4.5em; margin-left: 1.5em;
+    }
+
+    .qr_in1{
+        width: 18%; font-size: 3.4em;padding: 1px; margin-left: 2em;
+    }
+
+    .qr_in2, .qr_in3, .qr_in4{
+        width: 18%; font-size: 3.4em;padding: 1px; margin-left: 0.8em;
+    }
+
+    .span1{
+        font-size: 2.8em; padding: 1px;margin-left: 2.2em;
+    }
+
+    .span2{
+        color: red; font-size: 1.3em;
+    }
+
+    #boxbtn{
+        width: 3em; height: 3em;
+    }
+
+    .memo_label{
+        font-size: 4.5em; margin-left: 1.5em;
+    }
+
+    .memo_text{
+        width: 80%; font-size: 2.5em;padding: 1em; margin-left: 2.5em;
+    }
+
+    .key_p{
+        font-size: 8em;
+    }
+
+    #cancel_key{
+        margin-right: 15px;font-size: 3.5em; padding: 2px;
+    }
+
+    #issue_key{
+        font-size: 3.5em;padding: 2px;
+    }
+
+    #complete_key{
+        font-size: 3.5em;padding: 2px;display: none;
+    }
+}

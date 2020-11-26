@@ -1,0 +1,82 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/key/css/style.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+<script src="/static/key/js/keysaerch.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2 style="text-align: left; ">인식키<p style="text-align: right; font-size: 1.2vw">인식키 > 조회</p>
+</h2>
+
+<hr style="margin-top: 0px;">
+<div style="width: 100%">
+    <div class="searchfrm">
+        <div style="width: 80%; display: inline-block">
+            <div style="margin-bottom: 1rem; padding: 0px;">
+                <label class="name_label" >이름</label>
+                <input class="name_input" type="text" id="key_name"/>
+
+                <label class="loc_label">발급장소</label>
+                <input class="loc_input" type="text" id="key_loc"/>
+
+            </div>
+
+            <div style="margin-bottom: 1rem; padding: 0px; ">
+
+                <label class="id_label">ID</label>
+                <input class="id_input" type="text" id="key_id"/>
+
+                <div class="date_div">
+                <label class="date_label">발급일</label>
+                <input class="sdate" type="date" id="sdate"/><strong class="str_strong"> ~ </strong>
+                <input class="edate" type="date" id="edate"/>
+                </div>
+            </div>
+        </div>
+        <div style="width: 19%; display: inline-block; ">
+            <div style=" float: right;">
+                <button type="button" class="btn btn-default" id="searchbtn">검색
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="total_perpage" >
+    <div class="total_count">총 인식키 개수 <span id="total_key"></span></div>
+    <select style="float: right;" onchange="selectbox(this.value)" id="box">
+        <option value="5">5개</option>
+        <option value="10" selected id="10">10개</option>
+        <option value="20">20개</option>
+        <option value="30">30개</option>
+        <option value="50">50개</option>
+    </select>
+
+</div>
+<div class="board_list_wrap">
+    <div class="board_list">
+        <div class="board_list_head">
+            <div class="num">번호</div>
+            <div class="name">이름</div>
+            <div class="id">ID</div>
+            <div class="place">발급장소</div>
+            <div class="date">발급일</div>
+            <div class="logcheck">사이트이용</div>
+        </div>
+        <div class="board_list_body" id="key_body">
+        </div>
+    </div>
+    <div class="paging" id="paging">
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.name_label{
+    margin: 0.5em; text-align: center;
+}
+
+.name_input{
+    width: 10em;
+}
+
+.loc_label{
+    margin: 0.5em; text-align: center;
+}
+
+.loc_input{
+    width: 10em;
+}
+
+
+.id_label{
+    margin-left: 1em; margin-right: 1em; text-align: center;
+}
+
+.id_input{
+    width: 10em;
+}
+
+.date_div{
+    display: inline-block;
+}
+
+.date_label{
+    margin-left: 1em; margin-right: 1em; text-align: center;
+}
+
+.sdate{
+    width: 10em;
+}
+
+.str_strong{
+    font-size: 1em;
+}
+
+.edate{
+    width: 10em;
+}
+
+#searchbtn{
+    margin-right: 15px; width: 5em; font-size: 1em;padding: 1px;
+}
+
+
+
+.board_list_wrap {
+    padding: 50px;
+    padding-top: 0px;
+}
+
+.board_list_head,
+.board_list_body .item {
+    padding: 10px 0;
+    font-size: 0;
+}
+
+.board_list_head {
+    border-top: 2px solid green;
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list_body .item {
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list_head > div,
+.board_list_body .item > div {
+    display: inline-block;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.board_list_head > div {
+    font-weight: 600;
+}
+
+.board_list .num {
+    width: 10%;
+}
+
+.board_list .name {
+    width: 15%;
+}
+
+
+.board_list_body div.name a:hover {
+    text-decoration: underline;
+}
+
+.board_list .id{
+    width: 10%
+}
+
+.board_list .place {
+    width: 35%;
+}
+
+.board_list .date {
+    width: 15%;
+}
+
+.board_list .logcheck {
+    width: 15%;
+}
+
+.boardview {
+    margin-left: 12em;
+    margin-right: 12em;
+    width: 70%;
+}
+
+.total_perpage{
+    padding: 50px;
+    padding-bottom: 0px;
+}
+
+.total_count{
+    text-align: left;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.total_count span{
+    color: blue;
+    font-size: 1.2em;
+}
+
+
+
+/* paging */
+.paging {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.paging a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.paging a.bt {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    background-image: url(../img/page_bt.png);
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+
+.paging a.bt:hover {
+    background-color: #999;
+    cursor: pointer;
+}
+
+.paging a.first {
+    background-position: 10px -40px;
+}
+
+.paging a.prev {
+    margin-right: 5px;
+    background-position: 10px 10px;
+}
+
+.paging a.next {
+    margin-left: 5px;
+    background-position: -40px 10px;
+}
+
+.paging a.last {
+    background-position: -40px -40px;
+}
+
+.paging a.num {
+    margin: 0 5px;
+}
+
+.paging a.num.on {
+    color: green;
+}
+
+.paging a.num:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.notdetail_wrap tbody{
+    border: 2px solid #ccc;
+}
+
+.notdetail_wrap tr {
+    border: 2px solid #ccc;
+    height: 20px;
+}
+
+.notdetail_wrap th{
+	border: 2px solid #ccc;
+    text-align: center;
+}
+
+.searchfrm {
+    margin: 0 auto;
+    width: 90%;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+@media screen and (max-width: 767px){
+    .name_label{
+        margin: 0.5em 1em;text-align: center; font-size: 2.5em;
+    }
+
+    .name_input{
+        width:8em; font-size: 2.5em;
+    }
+
+    .loc_label{
+        margin: 0.5em;text-align: center; font-size: 2.5em;
+    }
+
+    .loc_input{
+        width: 8em; font-size: 2.5em;
+    }
+
+    .id_label{
+        margin-right: 1.5em; margin-left: 1.5em;text-align: center; font-size: 2.5em;
+    }
+
+    .id_input{
+        width: 8em; font-size: 2.5em;
+    }
+
+    .date_div{
+        width: 90%;
+    }
+
+    .date_label{
+        margin: 1em 0.5em 0em 0.5em; text-align: center; font-size: 2.5em;
+    }
+
+    .sdate{
+        font-size: 2em;
+    }
+
+    .str_strong{
+        font-size: 2em;
+    }
+
+    .edate{
+        font-size: 2em;
+    }
+
+    #searchbtn{
+        margin-right: 1em; width: 5em; font-size: 3em;padding: 1px;
+    }
+
+
+
+    .board_list_wrap {
+        padding: 10px;
+        padding-top: 0px;
+    }
+
+    .board_list_head,
+    .board_list_body .item {
+        padding: 10px 0;
+        font-size: 1vw;
+    }
+
+    .board_list_head {
+        border-top: 2px solid green;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .board_list_body .item {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .board_list_head > div,
+    .board_list_body .item > div {
+        display: inline-block;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .board_list_head > div {
+        font-weight: 600;
+    }
+
+    .board_list .num {
+        width: 7%;
+    }
+
+    .board_list .name {
+        width: 12%;
+    }
+
+    .board_list_body div.name a:hover {
+        text-decoration: underline;
+    }
+
+    .board_list .id{
+        width: 10%
+    }
+
+    .board_list .place {
+        width: 35%;
+    }
+
+    .board_list .date {
+        width: 15%;
+    }
+
+    .board_list .logcheck {
+        width: 15%;
+    }
+
+    .boardview {
+        margin-left: 2em;
+        margin-right: 2em;
+        width: 100%;
+    }
+
+    .total_perpage{
+        padding: 30px 10px 0px 10px;
+    }
+
+    .total_count{
+        text-align: left;
+        display: inline-block;
+        font-size: 3em;
+    }
+
+    .total_count span{
+        color: blue;}
+
+    #box{
+        width: 6em;
+        font-size: 3em;
+    }
+
+    /* paging */
+    .paging {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .paging a {
+        font-size: 2.5em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .paging a.bt {
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        background-image: url(../img/page_bt.png);
+        background-repeat: no-repeat;
+        border-radius: 100px;
+        text-indent: -1000px;
+        overflow: hidden;
+    }
+
+    .paging a.bt:hover {
+        background-color: #999;
+        cursor: pointer;
+    }
+
+    .paging a.first {
+        background-position: 10px -40px;
+    }
+
+    .paging a.prev {
+        margin-right: 5px;
+        background-position: 10px 10px;
+    }
+
+    .paging a.next {
+        margin-left: 5px;
+        background-position: -40px 10px;
+    }
+
+    .paging a.last {
+        background-position: -40px -40px;
+    }
+
+    .paging a.num {
+        margin: 0 5px;
+    }
+
+    .paging a.num.on {
+        color: green;
+    }
+
+    .paging a.num:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .notdetail_wrap tbody{
+        border: 2px solid #ccc;
+    }
+
+    .notdetail_wrap tr {
+        border: 2px solid #ccc;
+        height: 30px;
+    }
+
+    .notdetail_wrap th{
+        border: 2px solid #ccc;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .notdetail_wrap td{
+        font-size: 2em;
+    }
+
+    .searchfrm {
+        margin: 0 auto;
+        width: 100%;
+        /* To see the outline of the form */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+
+    #box option{
+        font-size: 1em;
+    }
+}

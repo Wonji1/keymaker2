@@ -1,0 +1,35 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/login/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/login/js/login.js"></script>
+<script src="/static/main/js/config.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+<hr class="hr1">
+<form>
+    <div class="id-div">
+        <label class="id-label">아이디</label>
+        <input class="id-input" type="text" name="user_id" id="user_id" placeholder="아이디"/>
+    </div>
+
+    <div class="pw-div">
+        <label class="pw-label">비밀번호</label>
+        <input class="pw-input " type="password" placeholder="비밀번호" name="user_pw1" id="user_pw1"/>
+    </div>
+    <div class="btn-div">
+        <button type="button" class="login-btn btn-default btn-xs" id="loginbtn">로그인</button>
+        <button type="button" class="reg-btn btn-default btn-xs" id="regbtn">회원가입</button>
+    </div>
+</form>
+{% endblock %}

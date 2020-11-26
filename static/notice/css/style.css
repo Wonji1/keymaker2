@@ -1,0 +1,96 @@
+h2 {
+    text-align: left;
+}
+
+h2 p {
+    text-align: right;
+    font-size: 1.2vw;
+}
+
+.tit-input {
+    width: 100%;
+    padding: 1px;
+    margin: 2px;
+}
+
+.content-input {
+    width: 100%;
+    height: 20em;
+    padding: 1em;
+}
+
+.searchfrm {
+    margin: 0 auto;
+    width: 90%;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+
+.search-content{
+    width: 80%;
+    display: inline-block;
+}
+
+.search-content div{
+	margin-bottom: 1rem;
+    padding: 0px;
+    display: inline-block;
+}
+
+.title-label{
+    margin: 5px;
+    width: 13.5%;
+    text-align: center;
+}
+
+.title-input{
+    width: 30%;
+}
+
+.cont-label{
+    width: 10%;
+    text-align: center;
+}
+
+.cont-input{
+    width: 30%;
+}
+
+.author-label{
+    margin: 5px;
+    width: 10%;
+    text-align: center;
+}
+
+.author-input{
+    width: 15%;
+}
+
+.date-label{
+    width: 10%;
+    text-align: center;
+}
+
+.search-box{
+    width: 19%;
+    display: inline-block;
+}
+
+.search-btn{
+   float: right;
+}
+
+.x-btn{
+    float: right;
+    border: none;
+    background-color: white;
+}
+
+.upload-btn{
+    width: 10em;
+    height: 100%;
+    margin: 2px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <title>keymaker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="/static/main/img/LOGO.png">
+    <link rel="stylesheet" href="/static/key/css/style.css">
+    <link rel="stylesheet" href="/static/main/css/main.css">
+    <link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+    <script src="/static/main/js/jquery-3.5.0.min.js"></script>
+    <script src="/static/main/js/bootstrap.min.js"></script>
+    <script src="/static/key/js/keydetail.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+<div class="container-fluid ">
+    <div class="row content">
+        <div class="col-sm-10 ">
+            <h2 style="text-align: left">인식키<p style="text-align: right; font-size: 1.2vw">인식키 > 조회 > 상세조회</p>
+            </h2>
+            <hr class="hr1">
+            <div style="width: 100%;margin-bottom: 40px;">
+                <div style="width: 25%;display: inline-table;"><p style="display: table-cell; vertical-align: middle;font-size: 20px;">사용자 정보</p></div>
+                <div class="notdetail_wrap" style="width: 70%;display: inline-table">
+                    <table style="border: 2px solid #ccc">
+                        <tbody>
+                        <tr>
+                            <input style="display: none" id="idx" value="{{keyindex}}">
+                            <th scope="row" class="th tit" style="width: 50px;">이름</th>
+                            <td class="td tit" style="width: 100px;" id="user_name">
+                            </td>
+                            <th scope="row" class="th" style="width: 50px;">ID</th>
+                            <td class="td" style="width: 100px;" id="user_id"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">회사</th>
+                            <td class="td" id="user_comp">
+                            </td>
+                            <th scope="row" class="th">직급</th>
+                            <td class="td" id="user_rank"></td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">이메일</th>
+                            <td class="td" id="user_mail">
+                            </td>
+                            <th scope="row" class="th">서비스<br>이용여부</th>
+                            <td class="td" id="user_service"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">핸드폰</th>
+                            <td colspan="3" class="td" id="user_phone">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="width: 100%;">
+                <div style="width: 25%;display: inline-table;"><p style="display: table-cell; vertical-align: middle;font-size: 20px;">인식키 정보</p></div>
+                <div class="notdetail_wrap" style="width: 70%;display: inline-table">
+                    <table style="border: 2px solid #ccc">
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="th tit" style="width: 50px" >인증키값</th>
+                            <td class="td tit" style="width: 250px;" id="key_val">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">발급장소</th>
+                            <td class="td" id="key_place">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">발급날짜</th>
+                            <td class="td" id="key_date">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="th">인식키<br>발급메모</th>
+                            <td class="td" id="key_memo">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

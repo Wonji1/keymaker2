@@ -1,0 +1,97 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/notice/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/notice/css/board.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2>공지사항<p>공지사항 > 조회 > 상세</p>
+</h2>
+
+<hr class="hr1">
+
+<div class="notdetail_wrap">
+    <table class="boardview">
+        <colgroup>
+            <col width="70px">
+            <col width="350px">
+            <col width="70px">
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <th scope="row" class="th tit">제목</th>
+            <td colspan="3" class="td tit">
+                공지사항
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">작성자</th>
+            <td class="td">
+                건아정보기술
+            </td>
+            <th scope="row" class="th">조회수</th>
+            <td class="td"> 66</td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">작성일</th>
+            <td colspan="3" class="td">
+                2020-04-28 13:48:20
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">첨부파일</th>
+            <td colspan="3" class="td">
+                <a href="#">공지사항_공고문.hwp</a> <span>[용량: 18 KBytes]</span> <br>
+                <a href="#">공지사항_공고문_정보.hwp</a> <span>[용량: 45 KBytes]</span> <br>
+                <a href="#">공지사항_공고문_포스터.jpg</a> <span>[용량: 2 MBytes]</span> <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text">
+                공지사항 관련 내용<br>
+                공지사항 공고문 / 공지사항 공고문 정보 / 공지사항 공고문 포스터 참조<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 <br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항<br>
+                공지사항 관련 내용<br>
+                공지사항 공고문 / 공지사항 공고문 정보 / 공지사항 공고문 포스터 참조<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 <br>
+                공지사항 공지사항 공지사항 공지사항 공지사항 공지사항 공지사항<br>
+                공지사항<br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center" style="width: 100%;margin-bottom: 1rem; margin-top: 1rem;">
+    <button type="button" class="btn btn-default btn-xs"
+            style="background-color: #DCDCDC; margin-right: 15px; width: 4em; font-size: 1.5em;">수정
+    </button>
+    <button type="button" class="btn btn-default btn-xs"
+            style="background-color: #DCDCDC; margin-right: 15px; width: 4em; font-size: 1.5em;">삭제
+    </button>
+    <button type="button" class="btn btn-default btn-xs"
+            style="background-color: #DCDCDC; width: 4em; font-size: 1.5em;">목록
+    </button>
+</div>
+{% endblock %}

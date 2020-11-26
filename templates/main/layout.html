@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <title>keymaker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="description" content="">
+    {% block head %}{% endblock %}
+    {% block css %}{% endblock %}
+
+</head>
+
+<body>
+<div>
+    <nav class="topnav" >
+        <div class="container-fluid">
+            <a id="toplogo" class="toplogo"><img class="top-logo" src="/static/main/img/LOGO.png" width="173" height="45" alt="건아"></a>
+            <div  style="display: none" id="sessionval"><span id="sessionuser"></span> <a id="sessionname"> </a>님<button class="btn btn-default btn-xs" style="margin-left: 2rem" id="logout">로그아웃</button></div>
+
+        </div>
+    </nav>
+    <nav class="navbar" id ="navbar"  style="z-index: 2;">
+        <div class="container-fluid" style="margin-left: 0px;">
+            <div class="navbar-header">
+
+                <ul id="main-menu">
+                    <li style="display: none" id="menu_key"><a>인식키</a><ul id="sub-menu" style="z-index: 3;">
+                        <li style="display: none" id="sub_keyissue" onclick="location.href='/keyissue'"><a aria-label="조회">발급</a></li>
+                        <li style="display: none" id="sub_keysearch" onclick="location.href='/keysearch'"><a aria-label="조회">조회</a></li>
+                        <li style="display: none" id="sub_keygis" onclick="location.href='#'"><a aria-label="GIS">GIS</a></li>
+                        <li style="display: none" id="sub_keystatic" onclick="location.href='#'"><a aria-label="통계">통계</a></li>
+                    </ul>
+                    </li>
+
+                    <li style="display: none" id="menu_module"><a>인식모듈</a>
+                        <ul id="sub-menu" style="z-index: 3;">
+                            <li style="display: none" id="sub_modulesearch" onclick="location.href='/modulesearch'"><a href="#" aria-label="조회">조회</a></li>
+                            <li style="display: none" id="sub_moduleadd" onclick="location.href='/moduleadd'"><a href="#" aria-label="등록">등록</a></li>
+                        </ul>
+                    </li>
+                    <li style="display: none" id="menu_notice"><a>공지사항</a>
+                        <ul id="sub-menu" style="z-index: 3;">
+                            <li style="display: none" id="sub_notsearch" onclick="location.href='#'"><a>조회</a></li>
+                            <li style="display: none" id="sub_notadd" onclick="location.href='#'"><a>등록</a></li>
+                        </ul>
+                    </li>
+                    <li style="display: none" id="menu_aduser"><a>사용자관리</a>
+                        <ul id="sub-menu" style="z-index: 3;">
+                            <li style="display: none" id="sub_approval" onclick="location.href='#'"><a>가입승인</a></li>
+                            <li style="display: none" id="sub_usersearch" onclick="location.href='#'"><a>조회</a></li>
+                            <li style="display: none" id="sub_useradd" onclick="location.href='#'"><a>등록</a></li>
+                            <li style="display: none" id="sub_auth" onclick="location.href='#'"><a>권한부여</a></li>
+                        </ul>
+                    </li>
+                    <li style="display: none" id="menu_adsys"><a>시스템관리</a>
+                        <ul id="sub-menu" style="z-index: 3;">
+                            <li style="display: none" id="sub_logsearch" onclick="location.href='#'"><a>이력조회</a></li>
+                            <li style="display: none" id="sub_moddate" onclick="location.href='#'"><a >기간수정</a></li>
+                            <li style="display: none" id="sub_backdb" onclick="location.href='#'"><a>DB백업</a></li>
+                        </ul>
+                    </li>
+                    <li style="display: none" id="menu_compsys" onclick="location.href='#'"><a>업체관리</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-1 sidenav">
+        </div>
+        <div class="col-sm-10">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="col-sm-1 sidenav">
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center" id ="footer">
+    <p><img src="/static/main/img/keona-removebg-preview.png" width="173" height="45" alt="건아"></p>
+</footer>
+
+{% block js %}{% endblock %}
+
+</body></html>

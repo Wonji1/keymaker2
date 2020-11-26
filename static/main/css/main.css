@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+
+#sessionuser, #sessionname, #sessionval{
+    font-size: 1.5rem;
+}
+.topnav {
+    text-align: right;
+    background-color: #ffffff;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+.toplogo{
+    float: left;
+    cursor: pointer;
+}
+
+.topnav span {
+    margin: 10px;
+    display: inline-block;
+}
+
+.topnav a{
+    color: blue;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.logout-btn{
+	margin-left: 2rem;
+    font-size: 1em;
+    padding: 3px;
+    display: inline-block;
+}
+
+html,
+body {
+    background-color: #ffffff;
+}
+
+hr {
+    height: 2px;
+    color: #777777;
+    background-color: #777777;
+    border: none;
+}
+
+.hr1{
+     margin-top: 0px;
+}
+
+.row.content {
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.sidenav {
+    padding-top: 20px;
+    height: 100%;
+}
+
+/*696969 관리자 */
+footer {
+    background-color: #C0C0C0;
+    color: white;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #C0C0C0;
+    width: 100%;
+    display: flex;
+    position: relative;
+    /*flex-flow: column nowrap;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+.navbar ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+#main-menu > li {
+    width: 12rem;
+    float: left;
+    cursor:pointer;
+}
+
+#main-menu > li > a {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: block;
+    padding: 16px 3px;
+    border-right: 1px solid rgba(0,0,0,0.15);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#sub-menu {
+    position: absolute;
+    background: #C0C0C0;
+    visibility: hidden;
+}
+
+#sub-menu > li {
+    width: 12rem;
+    background: #999999;
+    padding: 16px 3px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+#sub-menu > li >  a {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+
+}
+
+#main-menu > li:hover #sub-menu {
+    visibility: visible;
+
+}
+#main-menu > li:hover{
+    background: #adadad;
+}
+
+#sub-menu > li >  a:hover {
+    text-decoration: underline;
+}
+#sub-menu > li:hover{
+    background: #777777;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 0px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+
+    #main-menu > li {
+        width: 7rem;
+        float: left;
+        cursor:pointer;
+    }
+
+    #main-menu > li > a {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.85);
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        display: block;
+        padding: 1.8rem 3px;
+        border-right: 1px solid rgba(0,0,0,0.15);
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    }
+
+    #sub-menu {
+        position: absolute;
+        background: #C0C0C0;
+        visibility: hidden;
+    }
+
+    #sub-menu > li {
+        width: 7rem;
+        background: #999999;
+        padding: 16px 3px;
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    #sub-menu > li >  a {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+
+    }
+    #sessionuser, #sessionname, #sessionval{
+        font-size: 1rem;
+    }
+    #logout{
+        font-size: 1rem;
+    }
+}

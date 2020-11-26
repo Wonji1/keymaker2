@@ -1,0 +1,133 @@
+<p>************************ company *************************</p>
+<input id="input_button_company" type="button" value="접기" onclick="hideShowFunction('company_div', 'input_button_company')">
+<div id="company_div">
+    <!-- 회사 리스트 조회 -->
+    <div id="get_company_list_div">
+        <h1>get_company_list</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="get_company_list_user_key" id="get_company_list_user_key" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>COMPANY NAME</p></td>
+                    <td><input type="text" name="get_company_list_name" id="get_company_list_name" value="건아정보기술"></td>
+                </tr>
+                <tr>
+                    <td><p>CURRENTPAGE</p></td>
+                    <td><input type="text" name="get_company_list_currentpage" id="get_company_list_currentpage" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>COUNTPERPAGE</p></td>
+                    <td><input type="text" name="get_company_list_countperpage" id="get_company_list_countperpage" value="0"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="testFunction('get_company_list', 'result_get_company_list', 'true', 'get_company_list_div')"
+                               value="test(get)">
+                        <input type="button" onclick="testFunction('get_company_list', 'result_get_company_list', 'false', 'get_company_list_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_get_company_list"></p>
+        </div>
+    </div>
+    <input id="input_button_get_company_list" type="button" value="접기"
+               onclick="hideShowFunction('get_company_list_content_div', 'input_button_get_company_list')">
+    <div id="get_company_list_content_div">
+        <h3>Status</h3>
+        <h5>200 : API 호출에 성공하였고 결과값이 존재하는 경우</h5>
+        <h5>201 : API 호출에 성공하였으나 결과값이 존재하지 않는 경우</h5>
+        <h5>400 : DB 조회할 때 에러가 난 경우</h5>
+        <h5>401 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        <h3>입력값</h3>
+        <h5>CURRENTPAGE : 0 => 1페이지</h5>
+        <h5>COUNTPERPAGE : 0 => 총 개수</h5>
+    </div>
+
+    <!-- 회사 등록 -->
+    <div id="add_company_list_div">
+        <h1>add_company</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="add_company_list_user_key" id="add_company_list_user_key" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>COMPANY NAME</p></td>
+                    <td><input type="text" name="add_company_list_com_name" id="add_company_list_com_name" value="중복X"></td>
+                </tr>
+                <tr>
+                    <td><p>COMPANY ADDRESS</p></td>
+                    <td><input type="text" name="add_company_list_com_address" id="add_company_list_com_address" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>PHONE NUMBER</p></td>
+                    <td><input type="text" name="add_company_list_user_phone_number" id="add_company_list_user_phone_number" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>EMAIL</p></td>
+                    <td><input type="text" name="add_company_list_email" id="add_company_list_email" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>MEMO</p></td>
+                    <td><input type="text" name="add_company_list_memo" id="add_company_list_memo" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>DAY MAX COUNT</p></td>
+                    <td><input type="text" name="add_company_list_day_max_count" id="add_company_list_day_max_count" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>MAX COUNT</p></td>
+                    <td><input type="text" name="add_company_list_max_count" id="add_company_list_max_count" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>DATE MAX</p></td>
+                    <td><input type="text" name="add_company_list_date_max" id="add_company_list_date_max" value="2020-05-13"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="testFunction('add_company_list', 'result_add_company_list', 'true', 'add_company_list_div')"
+                               value="test(get)">
+                        <input type="button" onclick="testFunction('add_company_list', 'result_add_company_list', 'false', 'add_company_list_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_add_company_list"></p>
+        </div>
+    </div>
+    <input id="input_button_add_company_list" type="button" value="접기"
+               onclick="hideShowFunction('add_company_list_content_div', 'input_button_add_company_list')">
+    <div id="add_company_list_content_div">
+        <h3>Status</h3>
+        <h5>200 : 정상작동</h5>
+        <h5>400 : 업체명 중복</h5>
+        <h5>401 : 업체명 크기 부적합(1~100자)</h5>
+        <h5>402 : 업체명 타입 부적합(str)</h5>
+        <h5>403 : 주소 크기 부적합(~100자)</h5>
+        <h5>404 : 주소 타입 부적합(str)</h5>
+        <h5>405 : 전화번호 크기 부적합(12~13자)</h5>
+        <h5>406 : 전화번호 타입 부적합(str)</h5>
+        <h5>407 : 이메일 크기 부적합(~100자)</h5>
+        <h5>408 : 이메일 타입 부적합(str)</h5>
+        <h5>409 : 메모 크기 부적합(~255자)</h5>
+        <h5>410 : 메모 타입 부적합(str)</h5>
+        <h5>411 : 하루 최대 발급 개수 타입 부적합(int)</h5>
+        <h5>412 : 최대 발급 개수 타입 부적합(int)</h5>
+        <h5>413 : 최대 발급 날짜 타입 부적합(str)</h5>
+        <h5>414 : 업체를 저장하는 도중 DB 조회할 때 에러가 난 경우</h5>
+        <h5>415 : 업체를 저장하고 저장한 업체 리스트를 불러오는 곳에서 DB 조회할 때 에러가 난 경우</h5>
+        <h5>416 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        <h3>입력값</h3>
+        <h5>USER KEY : str 타입의 8자리 숫자가 아닌 경우 회원가입에서 업체정보 자가 등록으로 인식 (ex. 0 입력 시 자가 등록)</h5>
+    </div>
+</div>
+<p>**********************************************************</p>

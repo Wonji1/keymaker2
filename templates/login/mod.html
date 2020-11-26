@@ -1,0 +1,96 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/login/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+<script src="/static/login/js/mod.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<h1>회원정보 수정</h1>
+<hr class="hr1">
+
+<div class="id-div">
+    <label class="id-label">아이디</label>
+    <input class="read-input" type="text" name="user_id" id="user_id" readonly/>
+
+</div>
+
+<div class="pw-div">
+    <label class="pw-label">비밀번호</label>
+    <input class="mod-input" type="password" placeholder="비밀번호를 수정하지 않을 경우 작성X" name="user_pw1" id="user_pw1"/>
+</div>
+
+<div class="pw-div">
+    <label class="pw-label">비밀번호2</label>
+    <input class="mod-input" type="password" placeholder="비밀번호는 특수문자 x, 대소문자 구분x 영문 숫자를 20자 이내로 작성" name="user_pw2"
+           id="user_pw2"/>
+</div>
+
+<div class="name-div">
+    <label class="name-label">이름</label>
+    <input class="read-input" type="text" name="user_name" id="user_name" readonly/>
+</div>
+
+
+<div class="comp-div">
+    <label class="comp-label">회사명</label>
+    <select class="comp-select" name="" id="user_comp">
+
+    </select>
+    <button class="btn btn-default"id="add_comp">회사등록</button>
+</div>
+
+<div class="dept-div">
+    <label class="dept-label">부서명</label>
+    <input type="text" placeholder="한국어, 영어, 숫자로 작성" name="user_dept" id="user_dept"/>
+
+    <label class="rank-label">직급</label>
+    <select class="rank-select" name="" id="user_rank">
+        <option value="사원" selected>사원</option>
+        <option value="주임">주임</option>
+        <option value="대리">대리</option>
+        <option value="과장">과장</option>
+        <option value="차장">차장</option>
+        <option value="부장">부장</option>
+        <option value="이사">이사</option>
+        <option value="상무">상무</option>
+        <option value="전무">전무</option>
+        <option value="부사장">부사장</option>
+        <option value="사장">사장</option>
+        <option value="부회장">부회장</option>
+        <option value="회장">회장</option>
+    </select>
+</div>
+
+<div class="pn-div">
+    <label class="pn-label">전화번호</label>
+    <input type="text" name="user_pn1" id="user_pn1"/><strong class="sr1"> ㅡ </strong>
+    <input type="text" name="user_pn2" id="user_pn2"/><strong class="sr2"> ㅡ </strong>
+    <input type="text" name="user_pw3" id="user_pn3">
+
+</div>
+
+<div class="email-div">
+    <label class="email-label">이메일</label>
+    <input type="text" name="user_email1" id="user_email1"/> <strong class="sr3"> @ </strong>
+    <input type="text" name="user_email2" id="user_email2"/> <strong class="sr4"> . </strong>
+    <input type="text" name="user_email3" id="user_email3">
+</div>
+
+<div class="btn-div">
+    <button type="button" class="btn btn-default" id="modcancelbtn">수정취소</button>
+    <button type="button" class="btn btn-default" id="modbtn">수정확인 </button>
+    <button type="button" class="btn btn-default" id="talbtn">탈 퇴</button>
+</div>
+{% endblock %}
+

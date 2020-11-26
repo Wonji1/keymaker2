@@ -1,0 +1,252 @@
+<p>************************* key **************************</p>
+<input id="input_button_key" type="button" value="접기"
+       onclick="hideShowFunction('key_div', 'input_button_key')">
+<div id="key_div">
+
+    <!-- OR 코드 생성 -->
+    <div id="create_qr">
+        <h1>create_qr (API 배포 X)</h1>
+        <table>
+            <tr>
+                <td>URL</td>
+                <td><input type="text" name="create_qr_url" id="create_qr_url" value="e960100cb2cf291b"></td>
+            </tr>
+            <tr>
+                <td>QR code 이름</td>
+                <td><input type="text" name="create_qr_name" id="create_qr_name" value="test"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button"
+                           onclick="testFunction('create_qr', 'result_create_qr', 'true', 'create_qr_div')"
+                           value="test(get)">
+                    <input type="button"
+                           onclick="testFunction('create_qr', 'result_create_qr', 'false', 'create_qr_div')"
+                           value="test(post)">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="resultdiv">
+        <p id="result_create_qr"></p>
+    </div>
+
+    <!-- OR 코드 읽기 -->
+    <div id="read_qr">
+        <h1>read_qr (API 배포 X)</h1>
+        <form action="/api/read_qr" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="read_qr_user_key" id="read_qr_user_key" value="05660379"></td>
+                </tr>
+                <tr>
+                    <td><p>IMAGE</p></td>
+                    <td><input type="file" name="read_qr_image" id="read_qr_image"></td>
+                </tr>
+                <tr>
+                    <td><p>IMAGE_NAME</p></td>
+                    <td><input type="text" name="read_qr_image_name" id="read_qr_image_name" value="이름.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>IMAGE_SIZE</p></td>
+                    <td><input type="text" name="read_qr_image_size" id="read_qr_image_size" value="크기"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>제출</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="resultdiv">
+        <!-- <img -->
+        <p id="result_read_qr"></p>
+    </div>
+    <input id="input_button_read_qr" type="button" value="접기"
+           onclick="hideShowFunction('read_qr_content_div', 'input_button_read_qr')">
+    <div id="read_qr_content_div">
+        <h3>Status</h3>
+        <h5>200 : QR 코드 인식에 성공했을 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 이미지가 제대로 입력되지 않았을 경우</h5>
+        <h5>403 : 이미지가 제대로 인식되지 않았을 경우</h5>
+    </div>
+
+    <!-- 인식키 발급 -->
+    <div>
+        <h1>issue_key</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>USER KEY</td>
+                    <td><input type="text" name="issue_key_user_key" id="issue_key_user_key" value="05660379"></td>
+                </tr>
+                <tr>
+                    <td>INDEX</td>
+                    <td><input type="text" name="issue_key_user_key" id="issue_key_index" value="0"></td>
+                </tr>
+                <tr>
+                    <td>USER IP</td>
+                    <td><input type="text" name="issue_key_user_ip" id="issue_key_user_ip" value="0"></td>
+                </tr>
+                <tr>
+                    <td>QR KEY</td>
+                    <td><input type="text" name="issue_key_qr_key" id="issue_key_qr_key" value="e960100cb2cf291b"></td>
+                </tr>
+                <tr>
+                    <td>VERSION</td>
+                    <td><input type="text" name="issue_key_version" id="issue_key_version" value="new"></td>
+                </tr>
+                <tr>
+                    <td>MEMO</td>
+                    <td><input type="text" name="issue_key_memo" id="issue_key_memo" value=""></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('issue_key', 'result_issue_key', 'true', 'issue_key_div')"
+                               value="test(get)">
+                    </td>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('issue_key', 'result_issue_key', 'false', 'issue_key_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_issue_key"></p>
+        </div>
+    </div>
+    <input id="input_button_issue_key" type="button" value="접기"
+           onclick="hideShowFunction('issue_key_content_div', 'input_button_issue_key')">
+    <div id="issue_key_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식키 발급에 성공한 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 이미지가 제대로 입력되지 않았을 경우</h5>
+        <h5>403 : check_version API 호출에 실패한 경우</h5>
+        <h5>404 : create_key API 호출에 실패한 경우</h5>
+        <h5>405 : 인식키 발급 권한이 존재하지 않을 경우</h5>
+    </div>
+
+    <!-- 인식키 리스트 조회 -->
+    <div>
+        <h1>get_key_list</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>USER KEY</td>
+                    <td><input type="text" name="get_key_list_user_key" id="get_key_list_user_key" value="05660379"></td>
+                </tr>
+                <tr>
+                    <td>USER NAME</td>
+                    <td><input type="text" name="get_key_list_user_name" id="get_key_list_user_name" value="홍"></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS</td>
+                    <td><input type="text" name="get_key_list_address" id="get_key_list_address" value="올림픽로"></td>
+                </tr>
+                <tr>
+                    <td>USER ID</td>
+                    <td><input type="text" name="get_key_list_user_id" id="get_key_list_user_id" value="admin"></td>
+                </tr>
+                <tr>
+                    <td>DATE START</td>
+                    <td><input type="text" name="get_key_list_date_start" id="get_key_list_date_start" value="2020-05-29"></td>
+                </tr>
+                <tr>
+                    <td>DATE END</td>
+                    <td><input type="text" name="get_key_list_date_end" id="get_key_list_date_end" value="2020-05-29"></td>
+                </tr>
+                <tr>
+                    <td>CURRENTPAGE</td>
+                    <td><input type="text" name="get_key_list_currentpage" id="get_key_list_currentpage" value="0"></td>
+                </tr>
+                <tr>
+                    <td>COUNTPERPAGE</td>
+                    <td><input type="text" name="get_key_list_countperpage" id="get_key_list_countperpage" value="0"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_key_list', 'result_get_key_list', 'true', 'get_key_list_div')"
+                               value="test(get)">
+                    </td>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_key_list', 'result_get_key_list', 'false', 'get_key_list_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_get_key_list"></p>
+        </div>
+    </div>
+    <input id="input_button_get_key_list" type="button" value="접기"
+           onclick="hideShowFunction('get_key_list_content_div', 'input_button_get_key_list')">
+    <div id="get_key_list_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식키 리스트 조회에 성공한 경우</h5>
+        <h5>201 : 인식키 리스트 조회에 성공하였으나 결과값이 존재하지 않는 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 인식키 리스트 조회 도중 DB 에러가 난 경우</h5>
+        <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        <h5>404 : 인식키 조회 권한이 존재하지 않을 경우</h5>
+
+    <!-- 인식키 상세정보 조회 -->
+    <div>
+        <h1>get_key_info</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>USER KEY</td>
+                    <td><input type="text" name="get_key_info_user_key" id="get_key_info_user_key" value="05660379"></td>
+                </tr>
+                <tr>
+                    <td>INDEX</td>
+                    <td><input type="text" name="get_key_info_index" id="get_key_info_index" value="25"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_key_info', 'result_get_key_info', 'true', 'get_key_info_div')"
+                               value="test(get)">
+                    </td>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_key_info', 'result_get_key_info', 'false', 'get_key_info_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_get_key_info"></p>
+        </div>
+    </div>
+    <input id="input_button_get_key_info" type="button" value="접기"
+           onclick="hideShowFunction('get_key_info_content_div', 'input_button_get_key_info')">
+    <div id="get_key_info_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식키 리스트 조회에 성공한 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 인식키 리스트 조회 도중 DB 에러가 난 경우</h5>
+        <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        <h5>404 : 인식키 조회 권한이 존재하지 않을 경우</h5>
+    </div>
+</div>
+
+<p>***********************************************************</p>

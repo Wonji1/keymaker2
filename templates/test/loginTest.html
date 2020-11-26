@@ -1,0 +1,403 @@
+<p>************************* login **************************</p>
+<input id="input_button_login" type="button" value="접기" onclick="hideShowFunction('login_div', 'input_button_login')">
+<div id="login_div">
+
+    <!-- 로그인 -->
+    <div>
+        <h1>login</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>ID</p></td>
+                    <td><input type="text" name="login_user_id" id="login_user_id" value="admin01"></td>
+                </tr>
+                <tr>
+                    <td><p>PW</p></td>
+                    <td><input type="text" name="login_user_pw" id="login_user_pw" value="keymaker0001"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="testFunction('login', 'result_login', 'true', 'login_div')"
+                               value="test(get)">
+                        <input type="button" onclick="testFunction('login', 'result_login', 'false', 'login_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_login"></p>
+        </div>
+    </div>
+    <input id="input_button_login_" type="button" value="접기"
+               onclick="hideShowFunction('login_content_div', 'input_button_login_')">
+    <div id="login_content_div">
+        <h3>Status</h3>
+        <h5>200 : 동일한 IP로 접속한 사용자가 없어 로그인 성공</h5>
+        <h5>201 : 동일한 IP로 접속한 사용자가 존재해 해당 ID 강제 로그아웃 후 로그인 성공</h5>
+        <h5>400 : ID에 영어, 숫자 이외의 문자가 존재할 경우</h5>
+        <h5>401 : PW에 영어, 숫자 이외의 문자가 존재할 경우</h5>
+        <h5>402 : IP 추출이 제대로 이루어지지 않은 경우</h5>
+        <h5>403 : 로그아웃 API가 호출되었으나 동일한 IP가 조회되지 않은 경우</h5>
+        <h5>404 : 로그아웃 API가 호출되었으나 DB 조회 시 에러가 난 경우</h5>
+        <h5>405 : 동일한 IP로 접속한 사용자가 있어 로그아웃 된 경우</h5>
+        <h5>406 : 동일한 IP를 확인하는 과정에서 DB 조회 시 에러가 난 경우</h5>
+        <h5>407 : 접속 테이블에 저장하는 도중 DB 에러가 난 경우</h5>
+        <h5>408 : 해당 ID와 PW를 가지는 사용자가 존재하지 않을 경우</h5>
+        <h5>409 : 입력한 ID와 PW를 가지는 사용자를 조회할 때 DB 에러가 난 경우</h5>
+        <h5>410 : 탈퇴한 사용자일 경우</h5>
+        <h5>411 : 삭제된 사용자일 경우</h5>
+        <h5>412 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <div id="logout_div">
+        <!-- 로그아웃 -->
+        <div>
+            <h1>logout</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>IP</p></td>
+                        <td><input type="text" name="logout_user_ip" id="logout_user_ip" value="192.168.100.106"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('logout', 'result_logout', 'true', 'logout_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('logout', 'result_logout', 'false', 'logout_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_logout"></p>
+            </div>
+        </div>
+        <input id="input_button_logout" type="button" value="접기"
+               onclick="hideShowFunction('logout_content_div', 'input_button_logout')">
+        <div id="logout_content_div">
+            <h3>Status</h3>
+            <h5>200 : 정상작동</h5>
+            <h5>400 : IP 추출이 제대로 적용되지 않은 경우</h5>
+            <h5>401 : 동일한 IP로 접속한 사용자가 없을 경우</h5>
+            <h5>402 : 동일한 IP로 접속한 사용자 조회 시 DB 에러가 난 경우</h5>
+            <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="get_user_info_div">
+        <!-- 사용자 정보 확인 -->
+        <div>
+            <h1>get_user_info</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="get_user_info_user_key" id="get_user_info_user_key" value="05676950"></td>
+                    </tr>
+                    <tr>
+                        <td><p>ID</p></td>
+                        <td><input type="text" name="get_user_info_user_id" id="get_user_info_user_id" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>REQUEST</p></td>
+                        <td><input type="text" name="get_user_info_request" id="get_user_info_request" value="LGUSE0010"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('get_user_info', 'result_get_user_info', 'true', 'get_user_info_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('get_user_info', 'result_get_user_info', 'false', 'get_user_info_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_get_user_info"></p>
+            </div>
+        </div>
+        <input id="input_button_get_user_info" type="button" value="접기"
+               onclick="hideShowFunction('get_user_info_content_div', 'input_button_get_user_info')">
+        <div id="get_user_info_content_div">
+            <h3>Status</h3>
+            <h5>200 : API 호출에 성공하였고 결과값이 존재하는 경우</h5>
+            <h5>201 : API 호출에 성공하였으나 결과값이 존재하지 않는 경우</h5>
+            <h5>400 : ID의 값에 영어, 숫자 이외의 문자가 있는 경우</h5>
+            <h5>401 : DB 조회할 때 에러가 난 경우</h5>
+            <h5>402 : 권한이 없는 경우</h5>
+            <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="add_user_info_div">
+        <!-- 사용자 정보 저장 -->
+        <div>
+            <h1>add_user_info</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>ID</p></td>
+                        <td><input type="text" name="add_user_info_user_id" id="add_user_info_user_id" value="중복X"></td>
+                    </tr>
+                    <tr>
+                        <td><p>PW</p></td>
+                        <td><input type="text" name="add_user_info_user_pw" id="add_user_info_user_pw" value="1234"></td>
+                    </tr>
+                    <tr>
+                        <td><p>USER NAME</p></td>
+                        <td><input type="text" name="add_user_info_user_name" id="add_user_info_user_name" value="홍길동"></td>
+                    </tr>
+                    <tr>
+                        <td><p>COMPANY NAME</p></td>
+                        <td><input type="text" name="add_user_info_company_name" id="add_user_info_company_name" value="건아정보기술"></td>
+                    </tr>
+                    <tr>
+                        <td><p>DEPARTMENT</p></td>
+                        <td><input type="text" name="add_user_info_department" id="add_user_info_department" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>POSITION</p></td>
+                        <td><input type="text" name="add_user_info_user_position" id="add_user_info_user_position" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>PHONE NUMBER</p></td>
+                        <td><input type="text" name="add_user_info_phone_number" id="add_user_info_phone_number" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>EMAIL</p></td>
+                        <td><input type="text" name="add_user_info_email" id="add_user_info_email" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('add_user_info', 'result_add_user_info', 'true', 'add_user_info_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('add_user_info', 'result_add_user_info', 'false', 'add_user_info_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_add_user_info"></p>
+            </div>
+        </div>
+        <input id="input_button_add_user_info" type="button" value="접기"
+               onclick="hideShowFunction('add_user_info_content_div', 'input_button_add_user_info')">
+        <div id="add_user_info_content_div">
+            <h3>Status</h3>
+            <h5>200 : 정상작동</h5>
+            <h5>400 : ID 타입 부적합(str)</h5>
+            <h5>401 : ID 크기 부적합(1~20자)</h5>
+            <h5>402 : PW 타입 부적합(str)</h5>
+            <h5>403 : PW 크기 부적합(1~20자)</h5>
+            <h5>404 : 사용자명 타입 부적합(str)</h5>
+            <h5>405 : 사용자명 크기 부적합(1~25자)</h5>
+            <h5>406 : 회사명 타입 부적합(str)</h5>
+            <h5>407 : 회사명 크기 부적합(1~100자)</h5>
+            <h5>408 : 부서명 타입 부적합(str)</h5>
+            <h5>409 : 부서명 크기 부적합(0~100자)</h5>
+            <h5>410 : 직급 타입 부적합(str)</h5>
+            <h5>411 : 직급 크기 부적합(0~100자)</h5>
+            <h5>412 : 전화번호 타입 부적합(str)</h5>
+            <h5>413 : 전화번호 크기 부적합(12~13자)</h5>
+            <h5>414 : 이메일 타입 부적합(str)</h5>
+            <h5>415 : 이메일 크기 부적합(0~100자)</h5>
+            <h5>416 : ID에 영어, 숫자 이외의 문자가 있는 경우</h5>
+            <h5>417 : PW에 영어, 숫자 이외의 문자가 있는 경우</h5>
+            <h5>418 : 사용자 명에 특수문자가 있는 경우</h5>
+            <h5>419 : 회사명에 영어, 숫자, 한글 이외의 문자가 있는 경우</h5>
+            <h5>420 : 부서명에 영어, 숫자, 한글 이외의 문자가 있는 경우</h5>
+            <h5>421 : 동일한 ID 조회 과정에서 DB 에러가 난 경우</h5>
+            <h5>422 : 동일한 ID 가 존재하는 경우</h5>
+            <h5>423 : 동일한 회사명 조회 과정에서 DB 에러가 난 경우</h5>
+            <h5>424 : 동일한 회사명이 존재하지 않는 경우</h5>
+            <h5>425 : 사용자 정보 저장 도중 DB 에러가 난 경우</h5>
+            <h5>426 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="set_user_info_div">
+        <!-- 사용자 정보 수정 -->
+        <div>
+            <h1>set_user_info</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="set_user_info_user_key" id="set_user_info_user_key" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><p>REQUEST</p></td>
+                        <td><input type="text" name="set_user_info_request" id="set_user_info_request" value="LGUSE0010"></td>
+                    </tr>
+                    <tr>
+                        <td><p>PW</p></td>
+                        <td><input type="text" name="set_user_info_user_pw" id="set_user_info_user_pw" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>USER NAME</p></td>
+                        <td><input type="text" name="set_user_info_user_name" id="set_user_info_user_name" value="홍길동"></td>
+                    </tr>
+                    <tr>
+                        <td><p>COMPANY NAME</p></td>
+                        <td><input type="text" name="set_user_info_company_name" id="set_user_info_company_name" value="건아정보기술"></td>
+                    </tr>
+                    <tr>
+                        <td><p>DEPARTMENT</p></td>
+                        <td><input type="text" name="set_user_info_department" id="set_user_info_department" value="응용SW팀"></td>
+                    </tr>
+                    <tr>
+                        <td><p>POSITION</p></td>
+                        <td><input type="text" name="set_user_info_position" id="set_user_info_position" value="사원"></td>
+                    </tr>
+                    <tr>
+                        <td><p>PHONE NUMBER</p></td>
+                        <td><input type="text" name="set_user_info_phone_number" id="set_user_info_phone_number" value="010-0000-0000"></td>
+                    </tr>
+                    <tr>
+                        <td><p>EMAIL</p></td>
+                        <td><input type="text" name="set_user_info_email" id="set_user_info_email" value="1@1.1"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('set_user_info', 'result_set_user_info', 'true', 'set_user_info_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('set_user_info', 'result_set_user_info, 'false', 'set_user_info_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_set_user_info"></p>
+            </div>
+        </div>
+        <input id="input_button_set_user_info" type="button" value="접기"
+               onclick="hideShowFunction('set_user_info_content_div', 'input_button_set_user_info')">
+        <div id="set_user_info_content_div">
+            <h3>Status</h3>
+            <h5>200 : 사용자 정보 수정에 성공한 경우</h5>
+            <h5>400 : 접속해 있는 사용자가 아닌 경우</h5>
+            <h5>401 : 권한이 존재하지 않는 경우</h5>
+            <h5>402 : 사용자 정보 수정 도중 DB 에러가 난 경우</h5>
+            <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="get_access_info_div">
+        <!-- 접속한 사용자 조회 -->
+        <div>
+            <h1>get_access_info</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="get_access_info_user_key" id="get_access_info_user_key" value="06369713"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('get_access_info', 'result_get_access_info', 'true', 'get_access_info_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('get_access_info', 'result_get_access_info', 'false', 'get_access_info_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_get_access_info"></p>
+            </div>
+        </div>
+        <input id="input_button_get_access_info" type="button" value="접기"
+               onclick="hideShowFunction('get_access_info_content_div', 'input_button_get_access_info')">
+        <div id="get_access_info_content_div">
+            <h3>Status</h3>
+            <h5>200 : 동일한 사용자가 접속해 있을 경우(결과값이 존재하는 경우)</h5>
+            <h5>201 : 동일한 사용자가 접속해있지 않는 경우(결과값이 존재하지 않는 경우)</h5>
+            <h5>400 : 사용자 key 입력이 되지 않은 경우</h5>
+            <h5>401 : 사용자 IP가 추출되지 않은 경우</h5>
+            <h5>402 : 동일한 IP로 접속해 있는 사용자를 조회하는 도중 DB 에러가 난 경우</h5>
+            <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="set_user_wih_del_flag_div">
+        <!-- 탈퇴 또는 사용자 삭제 -->
+        <div>
+            <h1>set_user_wih_del_flag</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="set_user_wih_del_flag_user_key" id="set_user_wih_del_flag_user_key" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><p>REQUEST</p></td>
+                        <td><input type="text" name="set_user_wih_del_flag_request" id="set_user_wih_del_flag_request" value="LGUSE0011"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('set_user_wih_del_flag', 'result_set_user_wih_del_flag', 'true', 'set_user_wih_del_flag_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('set_user_wih_del_flag', 'result_set_user_wih_del_flag', 'false', 'set_user_wih_del_flag_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_set_user_wih_del_flag"></p>
+            </div>
+        </div>
+        <input id="input_button_set_user_wih_del_flag" type="button" value="접기"
+               onclick="hideShowFunction('set_user_wih_del_flag_content_div', 'input_button_set_user_wih_del_flag')">
+        <div id="set_user_wih_del_flag_content_div">
+            <h3>Status</h3>
+            <h5>200 : 탈퇴 혹은 사용자 삭제가 성공적으로 이루어진 경우</h5>
+            <h5>400 : 접속해 있는 사용자가 아닌 경우</h5>
+            <h5>401 : 권한이 존재하지 않는 경우</h5>
+            <h5>402 : 탈퇴 혹은 사용자 삭제 도중 DB 에러가 난 경우</h5>
+            <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+    <div id="get_user_auth_div">
+        <!-- 사용자 권한 조회 -->
+        <div>
+            <h1>get_user_auth</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="get_user_auth_user_key" id="get_user_auth_user_key" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="testFunction('get_user_auth', 'result_get_user_auth', 'true', 'get_user_auth_div')"
+                                   value="test(get)">
+                            <input type="button" onclick="testFunction('get_user_auth', 'result_get_user_auth', 'false', 'get_user_auth_div')"
+                                   value="test(post)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="resultdiv">
+                <p id="result_get_user_auth"></p>
+            </div>
+        </div>
+        <input id="input_button_get_user_auth" type="button" value="접기"
+               onclick="hideShowFunction('get_user_auth_content_div', 'input_button_get_user_auth')">
+        <div id="get_user_auth_content_div">
+            <h3>Status</h3>
+            <h5>200 : 사용자 권한 호출 성공</h5>
+            <h5>400 : 접속해 있는 사용자가 아닌 경우</h5>
+            <h5>401 : 권한 조회 도중 DB 에러가 난 경우</h5>
+            <h5>402 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+        </div>
+    </div>
+
+
+</div>
+<p>**********************************************************</p>

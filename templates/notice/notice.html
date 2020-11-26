@@ -1,0 +1,136 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/notice/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/notice/css/board.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2>공지사항<p>공지사항 > 조회</p>
+</h2>
+
+<hr class="hr1">
+<div style="width: 100%">
+    <form action="#" method="post" class="searchfrm">
+        <div class="search-content">
+            <div>
+                <label class="title-label" for="title">제목</label>
+                <input class="title-input" type="text" id="title" name="title"/>
+
+                <label class="cont-label" for="content">내용</label>
+                <input class="cont-input" type="text" id="content" name="content"/>
+
+            </div>
+
+            <div>
+                <label class="author-label" for="author">작성자</label>
+                <input class="author-input" type="text" id="author" name="author"/>
+
+                <label class="date-label">작성일</label>
+
+                <input type="date" id="sdate" name="sdate" style="width: 25%"/><strong style="font-size: 1em">
+                ~ </strong>
+                <input type="date" id="edate" name="edate" style="width: 25%"/>
+
+            </div>
+        </div>
+        <div class="search-box">
+            <div class="search-btn">
+                <button type="submit" class="btn btn-default" style="margin-right: 15px; width: 5rem; font-size: 1em;">
+                    검색
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<div class="total_perpage" style="padding: 50px; padding-bottom: 0px;">
+    <div class="total_count">총 공지사항 개수 <span>19</span></div>
+    <select style="float: right;">
+        <option value="5">5개</option>
+        <option value="10">10개</option>
+        <option value="20" selected>20개</option>
+        <option value="30">30개</option>
+        <option value="50">50개</option>
+    </select>
+</div>
+<div class="board_list_wrap">
+    <div class="board_list">
+        <div class="board_list_head">
+            <div class="num">번호</div>
+            <div class="tit">제목</div>
+            <div class="writer">글쓴이</div>
+            <div class="filecheck">파일</div>
+            <div class="date">작성일</div>
+            <div class="view">조회</div>
+        </div>
+        <div class="board_list_body">
+            <div class="item">
+                <div class="num">5</div>
+                <div class="tit"><a href="#">공지사항</a></div>
+                <div class="writer">관리자</div>
+                <div class="filecheck"><img src="/static/notice/img/icon_file.png"></div>
+                <div class="date">2020-04-27</div>
+                <div class="view">111</div>
+            </div>
+            <div class="item">
+                <div class="num">4</div>
+                <div class="tit"><a href="#">공지사항</a></div>
+                <div class="writer">관리자</div>
+                <div class="filecheck"></div>
+                <div class="date">2020-03-27</div>
+                <div class="view">222</div>
+            </div>
+            <div class="item">
+                <div class="num">3</div>
+                <div class="tit"><a href="#">공지사항</a></div>
+                <div class="writer">관리자</div>
+                <div class="filecheck"><img src="/static/notice/img/icon_file.png"></div>
+                <div class="date">2020-01-31</div>
+                <div class="view">333</div>
+            </div>
+            <div class="item">
+                <div class="num">2</div>
+                <div class="tit"><a href="#">공지사항</a></div>
+                <div class="writer">관리자</div>
+                <div class="filecheck"></div>
+                <div class="date">2019-10-28</div>
+                <div class="view">222</div>
+            </div>
+            <div class="item">
+                <div class="num">1</div>
+                <div class="tit"><a href="#">공지사항</a></div>
+                <div class="writer">관리자</div>
+                <div class="filecheck"></div>
+                <div class="date">2019-10-24</div>
+                <div class="view">111</div>
+            </div>
+        </div>
+    </div>
+    <div class="regbtn">
+        <div style="float: right; margin-top: 1em;">
+            <button type="button" class="btn btn-default btn-xs"
+                    style="background-color: #DCDCDC; margin-right: 15px; width: 5rem; font-size: 1em;">등록
+            </button>
+        </div>
+    </div>
+    <div class="paging">
+        <a href="#" class="bt first">처음 페이지</a>
+        <a href="#" class="bt prev">이전 페이지</a>
+        <a href="#" class="num on">1</a>
+        <a href="#" class="num">2</a>
+        <a href="#" class="num">3</a>
+        <a href="#" class="bt next">다음 페이지</a>
+        <a href="#" class="bt last">마지막 페이지</a>
+    </div>
+</div>
+{% endblock %}

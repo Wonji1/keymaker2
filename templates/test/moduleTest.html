@@ -1,0 +1,441 @@
+<p>************************* module **************************</p>
+<input id="input_button_module" type="button" value="접기"
+       onclick="hideShowFunction('module_div', 'input_button_module')">
+<div id="module_div">
+
+    <!-- 인식모듈 등록 -->
+    <div>
+        <h1>add_module_info</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="add_module_info_user_key" id="add_module_info_user_key"
+                               value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>MODULE NAME</p></td>
+                    <td><input type="text" name="add_module_info_module_name" id="add_module_info_module_name"
+                               value="모듈"></td>
+                </tr>
+                <tr>
+                    <td><p>VERSION</p></td>
+                    <td><input type="text" name="add_module_info_version" id="add_module_info_version" value="버전">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>MEMO</p></td>
+                    <td><input type="text" name="add_module_info_memo" id="add_module_info_memo" value="메모"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('add_module_info', 'result_add_module_info', 'true', 'add_module_info_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('add_module_info', 'result_add_module_info', 'false', 'add_module_info_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_add_module_info"></p>
+        </div>
+    </div>
+    <input id="input_button_add_module_info" type="button" value="접기"
+           onclick="hideShowFunction('add_module_info_content_div', 'input_button_add_module_info')">
+    <div id="add_module_info_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식모듈 등록에 성공한 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 인식모듈 등록 권한이 존재하지 않는 경우</h5>
+        <h5>403 : 인식모듈 등록 도중 DB 에러가 난 경우</h5>
+        <h5>404 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 인식모듈 리스트 조회 -->
+    <div id="get_module_list_div">
+        <h1>get_module_list</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="get_module_list_user_key" id="get_module_list_user_key"
+                               value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>MODULE NAME</p></td>
+                    <td><input type="text" name="get_module_list_module_name" id="get_module_list_module_name"
+                               value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>USER NAME</p></td>
+                    <td><input type="text" name="get_module_list_user_name" id="get_module_list_user_name"
+                               value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>VERSION</p></td>
+                    <td><input type="text" name="get_module_list_version" id="get_module_list_version" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>MEMO</p></td>
+                    <td><input type="text" name="get_module_list_memo" id="get_module_list_memo" value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>DATE_REG_START</p></td>
+                    <td><input type="text" name="get_module_list_date_reg_start" id="get_module_list_date_reg_start"
+                               value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>DATE_REG_END</p></td>
+                    <td><input type="text" name="get_module_list_date_reg_end" id="get_module_list_date_reg_end"
+                               value="0"></td>
+                </tr>
+                <tr>
+                    <td><p>CURRENTPAGE</p></td>
+                    <td><input type="text" name="get_module_list_currentpage" id="get_module_list_currentpage"
+                               value="1"></td>
+                </tr>
+                <tr>
+                    <td><p>COUNTPERPAGE</p></td>
+                    <td><input type="text" name="get_module_list_countperpage" id="get_module_list_countperpage"
+                               value="20"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_module_list', 'result_get_module_list', 'true', 'get_module_list_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('get_module_list', 'result_get_module_list', 'false', 'get_module_list_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="resultdiv">
+            <p id="result_get_module_list"></p>
+        </div>
+    </div>
+    <input id="input_button_get_module_list" type="button" value="접기"
+           onclick="hideShowFunction('get_module_list_content_div', 'input_button_get_module_list')">
+    <div id="get_module_list_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식모듈 조회에 성공하였고 결과값이 존재하는 경우</h5>
+        <h5>201 : 인식모듈 조회에 성공하였고 결과값이 존재하지 않는 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 인식모듈 조회 권한이 존재하지 않는 경우</h5>
+        <h5>403 : 인식모듈 조회 도중 DB 에러가 난 경우</h5>
+        <h5>404 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 인식모듈 상세정보 조회 또는 수정 시 조회 -->
+    <div id="get_module_info_div">
+        <h1>get_module_info</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="get_module_info_user_key" id="get_module_info_user_key"
+                               value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>REQUEST</p></td>
+                    <td><input type="text" name="get_module_info_request" id="get_module_info_request"
+                               value="LGMOD0001"></td>
+                </tr>
+                <tr>
+                    <td><p>INDEX</p></td>
+                    <td><input type="text" name="get_module_info_module_index" id="get_module_info_module_index"
+                               value="0"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('get_module_info', 'result_get_module_info', 'true', 'get_module_info_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('get_module_info', 'result_get_module_info', 'false', 'get_module_info_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="resultdiv">
+            <p id="result_get_module_info"></p>
+        </div>
+    </div>
+    <input id="input_button_get_module_info" type="button" value="접기"
+           onclick="hideShowFunction('get_module_info_content_div', 'input_button_get_module_info')">
+    <div id="get_module_info_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식모듈 상세정보 조회 또는 수정 조회에 성공한 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 상세정보 조회 요청 시 권한이 없거나, 수정 요청 시 작성자가 아니거나 권한이 없는 경우</h5>
+        <h5>403 : 인식모듈 정보를 불러오는 도중 DB 에러가 난 경우</h5>
+        <h5>404 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 인식모듈 수정 -->
+    <div id="set_module_info_div">
+        <h1>set_module_info</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="set_module_info_user_key" id="set_module_info_user_key"
+                               value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>INDEX</p></td>
+                    <td><input type="text" name="set_module_info_module_index" id="set_module_info_module_index"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><p>MODULE NAME</p></td>
+                    <td><input type="text" name="set_module_info_module_name" id="set_module_info_module_name"
+                               value="모듈"></td>
+                </tr>
+                <tr>
+                    <td><p>VERSION</p></td>
+                    <td><input type="text" name="set_module_info_version" id="set_module_info_version" value="버전">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>MEMO</p></td>
+                    <td><input type="text" name="set_module_info_memo" id="set_module_info_memo" value="메모">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('set_module_info', 'result_set_module_info', 'true', 'set_module_info_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('set_module_info', 'result_set_module_info', 'false', 'set_module_info_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_set_module_info"></p>
+        </div>
+    </div>
+    <input id="input_button_set_module_info" type="button" value="접기"
+           onclick="hideShowFunction('set_module_info_content_div', 'input_button_set_module_info')">
+    <div id="set_module_info_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식모듈 수정이 성공적으로 이루어졌을 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 작성자가 아니거나 인식모듈 수정 권한이 존재하지 않는 경우</h5>
+        <h5>404 : 인식모듈 수정 도중 DB 에러가 난 경우</h5>
+        <h5>405 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 인식모듈 삭제 -->
+    <div id="del_module_info_div">
+        <h1>del_module_info</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="del_module_info_user_key" id="del_module_info_user_key"
+                               value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>INDEX</p></td>
+                    <td><input type="text" name="del_module_info_module_index" id="del_module_info_module_index"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><p>FILE EXIST FLAG</p></td>
+                    <td><input type="text" name="del_module_info_file_exist_flag" id="del_module_info_file_exist_flag"
+                               value="Y"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('del_module_info', 'result_del_module_info', 'true', 'del_module_info_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('del_module_info', 'result_del_module_info', 'false', 'del_module_info_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_del_module_info"></p>
+        </div>
+    </div>
+    <input id="input_button_del_module_info" type="button" value="접기"
+           onclick="hideShowFunction('del_module_info_content_div', 'input_button_del_module_info')">
+    <div id="del_module_info_content_div">
+        <h3>Status</h3>
+        <h5>200 : 인식모듈 삭제가 성공적으로 이루어졌을 경우</h5>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 작성자가 아니거나 인식모듈 삭제 권한이 존재하지 않는 경우</h5>
+        <h5>404 : 인식모듈 수정 도중 DB 에러가 난 경우</h5>
+        <h5>405 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 파일 업로드 -->
+    <div id="upload_file_div">
+        <h1>upload_file</h1>
+        <div>
+            <form action="/api/upload_file" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><p>USER KEY</p></td>
+                        <td><input type="text" name="upload_file_user_key" id="upload_file_user_key" value="05661231">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>REQUEST</p></td>
+                        <td><input type="text" name="upload_file_request" id="upload_file_request" value="LGMOD0005">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>INDEX</p></td>
+                        <td><input type="text" name="upload_file_index" id="upload_file_index" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>FILE NAME</p></td>
+                        <td><input type="text" name="upload_file_file_name" id="upload_file_file_name"
+                                   value="파일 이름.zip">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>FILE SIZE</p></td>
+                        <td><input type="text" name="upload_file_file_size" id="upload_file_file_size" value="파일 크기">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>FILE</p></td>
+                        <td><input type="file" name="upload_file_file" id="upload_file_file"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="resultdiv">
+            <p id="result_upload_file"></p>
+        </div>
+    </div>
+    <input id="input_button_upload_file" type="button" value="접기"
+           onclick="hideShowFunction('upload_file_content_div', 'input_button_upload_file')">
+    <div id="upload_file_content_div">
+        <h3>Status</h3>
+        <h5>200 : 파일 업로드가 성공적으로 이루어졌을 경우</h5>
+        <h5>400 : 파일이 제대로 입력되지 않았을 경우</h5>
+        <h5>401 : 파일 업로드 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 파일 삭제 -->
+    <div id="del_file_div">
+        <h1>del_file</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="del_file_user_key" id="del_file_user_key" value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>REQUEST</p></td>
+                    <td><input type="text" name="del_file_request" id="del_file_request" value="LGMOD0004">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>INDEX</p></td>
+                    <td><input type="text" name="del_file_index" id="del_file_index" value="0"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('del_file', 'result_del_file', 'true', 'del_file_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('del_file', 'result_del_file', 'false', 'del_file_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_del_file"></p>
+        </div>
+    </div>
+    <input id="input_button_del_file" type="button" value="접기"
+           onclick="hideShowFunction('del_file_content_div', 'input_button_del_file')">
+    <div id="del_file_content_div">
+        <h3>Status</h3>
+        <h5>200 : 파일 삭제가 성공적으로 이루어졌을 경우</h5>
+        <h5>400 : 파일 삭제를 요청하였으나 해당 게시글에 파일이 존재하지 않을 경우</h5>
+        <h5>401 : 파일 삭제 도중 DB 에러</h5>
+        <h5>402 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+    <!-- 파일 다운로드 -->
+    <div id="down_module_div">
+        <h1>down_module</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><p>USER KEY</p></td>
+                    <td><input type="text" name="down_module_user_key" id="down_module_user_key" value="05661231">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>INDEX</p></td>
+                    <td><input type="text" name="down_module_index" id="down_module_index" value="0"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button"
+                               onclick="testFunction('down_module', 'result_down_module', 'true', 'down_module_div')"
+                               value="test(get)">
+                        <input type="button"
+                               onclick="testFunction('down_module', 'result_down_module', 'false', 'down_module_div')"
+                               value="test(post)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="resultdiv">
+            <p id="result_down_module"></p>
+        </div>
+    </div>
+    <input id="input_button_down_module" type="button" value="접기"
+           onclick="hideShowFunction('down_module_content_div', 'input_button_down_module')">
+    <div id="down_module_content_div">
+        <h3>Status</h3>
+        <h5>400 : 접속해있는 사용자가 아닐 경우</h5>
+        <h5>401 : 접속 여부 확인 도중 DB 에러가 난 경우</h5>
+        <h5>402 : 다운로드 요청한 게시글에 첨부파일이 존재하지 않을 경우</h5>
+        <h5>403 : 입력값에서 디비 또는 API 파라미터에 입력할 수 없는 특수문자가 포함되어 있는 경우</h5>
+    </div>
+
+
+</div>
+
+
+<p>***********************************************************</p>

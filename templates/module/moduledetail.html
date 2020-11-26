@@ -1,0 +1,78 @@
+{% extends "main/layout.html" %}
+
+{% block head %}
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+{% endblock %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/module/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/module/css/board.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+<script src="/static/module/js/moduledetail.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2>인식모듈<p>인식모듈 > 조회 > 상세</p>
+</h2>
+
+<hr class="hr1">
+
+<div class="notdetail_wrap">
+    <table class="boardview">
+        <colgroup>
+            <col width="15%">
+            <col width="60%">
+            <col width="15%">
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <th scope="row" class="th">모듈명</th>
+            <td class="td" id="module_name">
+            </td>
+            <th scope="row" class="th">버전정보</th>
+            <td class="td" id="module_version"></td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">작성자</th>
+            <td class="td" id="module_author">
+            </td>
+            <th scope="row" class="th">조회수</th>
+            <td class="td" id="module_click"></td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">작성일</th>
+            <td colspan=4" class="td" id="module_time">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" class="th">첨부파일</th>
+            <td colspan="4" class="td" id="module_file">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text" id="module_memo" style="height: 200px;">
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center" style="width: 100%;margin-bottom: 1rem; margin-top: 1rem;">
+    <input style="display: none" id="idx" value="{{moduleindex}}">
+    <input style="display: none" id="existflag">
+    <button type="button" class="btn btn-default" id="mod_module">수정</button>
+    <button type="button" class="btn btn-default" id="del_module">삭제</button>
+    <button type="button" class="btn btn-default" id="mn_module">목록</button>
+</div>
+{% endblock %}

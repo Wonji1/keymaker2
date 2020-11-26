@@ -1,0 +1,81 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/key/css/style.css">
+<link rel="stylesheet" href="/static/key/css/issue.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+<script src="/static/main/js/jquery.form.min.js"></script>
+<script src="/static/key/js/issue.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2 style="text-align: left; ">인식키<p style="text-align: right; font-size: 1.2vw">인식키 > 발급</p>
+</h2>
+
+<hr class="hr1">
+<form action="#" method="post">
+
+    <div style="width: 100%;">
+        <div style="width: 45%; display: inline-block">
+            <label class="camera_label" id="ip">카메라 열기</label><br>
+            <input type="file" accept="image/*" style="display: none" id="cam">
+            <button class="camare_btn" type="button" id="cambtn">Camera
+            </button>
+                <span class="camera_span" >* 모바일만<br>사용가능</span>
+        </div>
+        <div style="width: 45%; display: inline-block">
+            <label class="qr_labal" id="lon">QR코드 업로드</label><br>
+            <button class="qr_btn" type="button" id="uploadbtn">업로드</button>
+        </div>
+    </div>
+    <div style="width: 100%; margin-top: 2em;">
+        <div style="width: 40%; display: table-cell; text-align: center; height: 100px; vertical-align: middle; ">
+            <span class="upload_span" id="file_span">업로드 파일명</span>
+        </div>
+        <div style="width: 50%; display: table-cell">
+            <div style="width: 25%; display: inline-block" id="img_div">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; margin-top: 2em;">
+        <div style="width: 70%; display: inline-block">
+            <label class="img_label" id="read_qr_index" value="0">QR코드 값</label><br>
+            <input class="qr_in1" id="qr1"/>
+            <input class="qr_in2" id="qr2"/>
+            <input class="qr_in3" id="qr3"/>
+            <input class="qr_in4" id="qr4"/>
+        </div>
+    </div>
+    <div style="width: 100%; margin-top: 2em;" >
+        <span class="span1">2018년 5월 이전의 <span
+                class="span2">구 버전</span> 인식키는 여기를 체크 하세요. &nbsp;&nbsp;</span>
+        <input type="checkbox" id="boxbtn">
+    </div>
+
+    <div style="width: 100%; margin-top: 2em;">
+        <div style="width: 50%; display: inline-block">
+            <label class="memo_label">QR코드 메모</label><br>
+            <textarea class="memo_text" id="qr_memo"></textarea>
+        </div>
+        <div style="width: 40%; display: inline-block; ">
+            <p class="key_p text-center" id="key_val"></p>
+        </div>
+    </div>
+    <div class="text-center" style="width: 100%;margin-bottom: 1rem; margin-top: 1rem;">
+        <button type="button" class="btn btn-default btn-xs" id="cancel_key">발급 취소
+        </button>
+        <button type="button" class="btn btn-default btn-xs" id="issue_key">키 발급 받기
+        </button>
+        <button type="button" class="btn btn-default btn-xs" id="complete_key">키 발급 완료
+        </button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "main/layout.html" %}
+
+{% block css %}
+<link rel="shortcut icon" href="/static/main/img/LOGO.png">
+<link rel="stylesheet" href="/static/notice/css/style.css">
+<link rel="stylesheet" href="/static/main/css/main.css">
+<link rel="stylesheet" href="/static/notice/css/board.css">
+<link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/main/js/jquery-3.5.0.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/main.js"></script>
+{% endblock %}
+
+{% block content %}
+<h2>공지사항<p>공지사항 > 조회 > 등록</p>
+</h2>
+
+<hr class="hr1">
+<form action="#" method="post">
+    <div class="notdetail_wrap">
+        <table class="boardview">
+            <colgroup>
+                <col width="70px">
+                <col width="350px">
+                <col width="70px">
+                <col>
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row" class="th tit">제목</th>
+                <td colspan="3" class="td tit">
+                    <input class="tit-input" placeholder="제목입력"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="th">작성자</th>
+                <td colspan="3" class="td">
+                    건아정보기술
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="th">첨부파일</th>
+                <td class="td">
+
+                </td>
+                <th scope="row" class="th"></th>
+                <td class="td text-center">
+                    <button style="width: 10em; height: 100%; margin: 2px">파일첨부</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="text">
+                    <textarea class="content-input" placeholder="내용입력"></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center" style="width: 100%;margin-bottom: 1rem; margin-top: 1rem;">
+        <button type="button" class="btn btn-default btn-xs"
+                style="background-color: #DCDCDC; margin-right: 15px; width: 6em; font-size: 1.5em;">등록
+        </button>
+        <button type="button" class="btn btn-default btn-xs"
+                style="background-color: #DCDCDC;  width: 6em; font-size: 1.5em;">등록 취소
+        </button>
+    </div>
+</form>
+{% endblock %}
